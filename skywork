@@ -1,0 +1,15 @@
+model_id=Skywork/SkyReels-V2-DF-14B-540P
+# synchronous inference
+python3 generate_video_df.py \
+  --model_id ${model_id} \
+  --resolution 540P \
+  --ar_step 0 \
+  --base_num_frames 97 \
+  --num_frames 257 \
+  --overlap_history 17 \
+  --prompt "A graceful white swan with a curved neck and delicate feathers swimming in a serene lake at dawn, its reflection perfectly mirrored in the still water as mist rises from the surface, with the swan occasionally dipping its head into the water to feed." \
+  --addnoise_condition 20 \
+  --offload \
+  --teacache \
+  --use_ret_steps \
+  --teacache_thresh 0.3
